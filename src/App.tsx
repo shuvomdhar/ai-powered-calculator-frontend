@@ -6,6 +6,8 @@ import Home from '@/screens/home';
 
 import '@/index.css';
 
+export const serverurl="https://ai-powered-calculator-backend.onrender.com";
+
 const paths = [
   {
     path: '/',

@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 // import Draggable from 'react-draggable';
 import { SWATCHES } from '@/constants';
+import { serverurl } from '../../App';
 // import {LazyBrush} from 'lazy-brush';
 
 interface GeneratedResult {
@@ -150,7 +151,7 @@ export default function Home() {
         if (canvas) {
             const response = await axios({
                 method: 'post',
-                url: `${import.meta.env.VITE_API_URL}/calculate`,
+                url: `${serverurl}/calculate`,
                 data: {
                     image: canvas.toDataURL('image/png'),
                     dict_of_vars: dictOfVars
